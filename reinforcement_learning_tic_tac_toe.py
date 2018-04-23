@@ -13,6 +13,7 @@ class Agent:
         self.env = env  # Game environment
         self.alpha  = alpha
         self.game_cache = np.zeros(shape=(5,),dtype=np.int16)# at most 5 moves
+        #  caN be made (game cache stores index of moves)
         self.explore_prob = 0.1 #  10% random
         self.moves_count = 0
         self.symbol = symbol
@@ -24,7 +25,6 @@ class Agent:
             self.num = 0
             self.win_id = 0
             self.lose_id = 2
-        #  caN be made (game cache stores index of moves)
 
     def _select_best_move(self,state):
         i = 0
