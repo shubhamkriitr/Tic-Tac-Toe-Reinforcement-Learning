@@ -74,8 +74,8 @@ class Agent:
                 return idx[i]
 
     def make_move(self):
-        """Makes move, updates value function, and returns `Over` for game over\
-        and `Go` otherwise."""
+        """Makes move, updates value function, and returns current conclusion
+        of the move made."""
         i, code = self._select_best_move(self.env.get_state())
         self.game_cache[self.moves_count] = code
         self.moves_count+=1
